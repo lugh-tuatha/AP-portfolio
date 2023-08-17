@@ -1,9 +1,10 @@
 'use client'
 import { useTheme } from 'next-themes'
 import React from 'react'
+import * as Md from "react-icons/md";
 
 function Header() {
-  const { resolvedTheme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   return (
     <header>
       <nav>
@@ -12,8 +13,16 @@ function Header() {
           <li>About</li>
         </ul>
 
-        <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
-          {resolvedTheme === 'dark' ? 'light' : 'dark'}
+        <button>
+          {theme === 'dark' ? (
+            <Md.MdLightMode
+              onClick={() => setTheme('light')}
+              className='text-2xl cursor-pointer' />
+          ) : (
+            <Md.MdDarkMode
+              onClick={() => setTheme('dark')}
+              className='text-2xl cursor-pointer' />
+          )}
         </button>
       </nav>
     </header>
