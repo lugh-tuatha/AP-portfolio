@@ -1,16 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from '../components/button/Button.astro'
+import Button from "../components/button/Button.astro";
+
+import * as Ai from "react-icons/ai";
 ---
 
 <Layout title="Home">
   <main>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    
-    <Button>Aceee</Button>
+    <div class="xl:flex justify-between gap-20 mt-8">
+      <div class="xl:w-1/2">
+        <h1 class="font-bold text-5xl">
+          Ace is a <span class="text-blue-400">software engineer</span> who waste
+          time just to save yours
+        </h1>
+        <p class="opacity-70 my-6 w-3/4">
+          Lorem ipsum dolor srendis ab id nemo ipsam, nesciunt modi mollitia.
+          Eum recusandae eos tempore hic cupiditate officiis a enim, corporis,
+          animi cum voluptatum et?
+        </p>
+        <Button>Readmore</Button>
+
+        <div class="mt-4 flex gap-2">
+          <Ai.AiFillGithub size={32} />
+          <Ai.AiFillFacebook size={32} />
+          <Ai.AiFillTwitterSquare size={32} />
+          <Ai.AiFillLinkedin size={32} />
+        </div>
+      </div>
+      <div class="xl:w-1/2 mt-6 xl:mt-0">
+        <img
+          src="https://th.bing.com/th/id/R.96239683eca34942e89cb741a29f5064?rik=ykB%2bdrBjyUktsg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fDesktop-Wallpaper-HD.jpg&ehk=Q905Ua72hWN2bZSm1tZJkHwnptz%2f98VPhvaLiOQctts%3d&risl=&pid=ImgRaw&r=0"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="border-2 mt-6 xl:w-4/5 mx-auto rounded-lg border-gray-200 p-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, esse Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum saepe voluptas Lorem ipsum dolor sit amet, consectetur adipisicing.. <br>
+
+      <p class="text-end">- Lorem, ipsum dolor.</p>
+    </div>
   </main>
 </Layout>
 
 <script>
-  import '../js/script';
+  import "../js/script";
 </script>
