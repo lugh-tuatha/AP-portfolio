@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/button/Button.astro";
+import Main from "../components/container/Main.astro"
+import H1 from "../components/typography/H1.astro"
 
 import * as Ai from "react-icons/ai";
 ---
 
 <Layout title="Home">
-  <main>
+  <Main>
     <div class="xl:flex justify-between gap-20 mt-8">
       <div class="xl:w-1/2">
         <h1 class="font-bold text-5xl">
@@ -40,7 +42,7 @@ import * as Ai from "react-icons/ai";
 
       <p class="text-end">- Lorem, ipsum dolor.</p>
     </div>
-  </main>
+  </Main>
 </Layout>
 
 <script>

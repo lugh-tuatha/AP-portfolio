@@ -4,6 +4,8 @@ import Navlinks from './Navlinks';
 
 import * as Io from 'react-icons/io'
 
+import Main from '../container/Main.astro';
+
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDark, setIsDark] = useState(true)
@@ -12,8 +14,8 @@ function Header() {
     setOpenMenu(!openMenu); 
   };
   return (
-    <>
-      <nav className="flex items-center justify-between h-20 shadow-md shadow-gray-300 ">
+    <main className='px-24 max-w-7xl w-full mx-auto max-sm:px-5'>
+      <nav className="flex items-center justify-between h-20">
         <h1 className="text-blue-400 font-bold text-2xl"><a href="/">BRAND</a></h1>
 
         <div className="hidden md:flex items-center gap-6 font-semibold">
@@ -37,7 +39,7 @@ function Header() {
           </label>
         </div>
       </nav>
-      
+
       {/* mobile menu */}
       <div className={`mobile-menu w-full absolute bg-white ${openMenu ? '' : 'hidden'}`}>
         <div className="text-center font-semibold ">
@@ -48,7 +50,7 @@ function Header() {
           <button className="px-4 py-2 bg-blue-300 rounded-md mt-4 md:mt-0">Download CV</button>
         </div>
       </div>
-    </>
+    </main>
   )
 }
 
