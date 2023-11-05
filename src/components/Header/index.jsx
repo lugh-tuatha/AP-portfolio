@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.css';
 import Navlinks from './Navlinks';
 
 import * as Io from 'react-icons/io'
 
-import Main from '../container/Main.astro';
-
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDark, setIsDark] = useState(true)
+
+  useEffect(() => {
+    if(isDark){
+      document.documentElement.classList.add("dark")
+    }else{
+      document.documentElement.classList.remove("dark")
+    }
+  }, [isDark])
 
   const handleCheckboxChange = () => {
     setOpenMenu(!openMenu); 
@@ -27,7 +33,7 @@ function Header() {
             {isDark ? <Io.IoMdMoon size={22} /> : <Io.IoMdSunny size={22} />}
           </div>
 
-          <button className="px-4 py-2 bg-blue-300 rounded-md">Download CV</button>
+          <button className="px-4 py-2 bg-blue-300 text-btn rounded-md">Download CV</button>
         </div>
 
         <div className="md:hidden">

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bkg: 255, 255, 255;
+    --color-txt: 0, 0, 0;
+    --color-btn: 0, 0, 0;
+  }
+}
+
+html.dark{
+  --color-bkg: 13, 17, 23;
+  --color-txt: 164, 184, 213;
+}

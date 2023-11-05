@@ -12,7 +12,7 @@ import Header from "../components/header";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -21,7 +21,7 @@ import Header from "../components/header";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-bkg text-txt">
     <Header client:load/>
     <div>
       <slot />
