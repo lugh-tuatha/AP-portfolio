@@ -47,13 +47,15 @@ function Header() {
       </nav>
 
       {/* mobile menu */}
-      <div className={`mobile-menu w-full absolute bg-white ${openMenu ? '' : 'hidden'}`}>
-        <div className="text-center font-semibold ">
-          <ul className="flex text-xl flex-col gap-2">
-            <Navlinks />
-          </ul>
+      <div className={`relative mobile-menu z-10  ${openMenu ? '' : 'hidden'}`}>
+        <div className='absolute w-full bg-bkg h-screen'>
+          <div className="text-center font-semibold ">
+            <ul className="flex text-xl flex-col gap-2">
+              <Navlinks />
+            </ul>
 
-          <button className="px-4 py-2 bg-blue-300 rounded-md mt-4 md:mt-0">Download CV</button>
+            <button className="px-4 py-2 bg-blue-300 rounded-md mt-4 md:mt-0">Download CV</button>
+          </div>
         </div>
       </div>
     </main>

@@ -2,19 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/button/Button.astro";
 import Main from "../components/container/Main.astro"
-import H1 from "../components/typography/H1.astro"
+import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs.astro'
 
 import * as Ai from "react-icons/ai";
 
 import '../styles/globals.css'
+
+import { INFO } from '../shared/constants/info'
 ---
 
 <Layout title="Home">
   <Main>
-    <div class="xl:flex justify-between gap-20 mt-8">
+    <Breadcrumbs>home</Breadcrumbs>
+    <div class="xl:flex justify-between gap-20">
       <div class="xl:w-1/2">
         <h1 class="font-bold text-5xl">
-          Ace is a <span class="text-blue-400">software engineer</span> who waste
+          {INFO.ACE.FIRST_NAME} is a <span class="text-blue-400">software engineer</span> who waste
           time just to save yours
         </h1>
         <p class="opacity-70 my-6 w-3/4">
